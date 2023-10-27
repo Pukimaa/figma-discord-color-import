@@ -28,6 +28,7 @@ interface RGB {
 
 figma.showUI(__html__);
 figma.ui.onmessage = (msg) => {
+  if (msg.type === "cancel") return figma.closePlugin();
   if (msg.type === "create-variables") {
     let createdCollection;
     let mode;
