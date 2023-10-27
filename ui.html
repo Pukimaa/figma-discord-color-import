@@ -1,0 +1,17 @@
+<h2>Discord Color Import</h2>
+<textarea id="input" rows="5" cols="30" aria-label="Raw Color Export" placeholder="Raw Color Export from your clipboard"></textarea>
+<br /><br />
+<input id="collection" type="text" aria-label="Collection Name" placeholder="Collection Name">
+<br /><br />
+<button id="create">Create Variables</button>
+<button id="cancel">Cancel</button>
+
+<script>
+
+document.getElementById('create').onclick = () => {
+  const rawValues = document.getElementById('input').value.replaceAll("\n", "").replaceAll("hex", "\"hex\"");
+  const collection = document.getElementById('collection').value;
+  parent.postMessage({ pluginMessage: { type: 'create-variables', rawValues, collection } }, '*')
+}
+
+</script>

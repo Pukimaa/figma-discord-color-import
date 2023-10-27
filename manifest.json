@@ -1,0 +1,13 @@
+{
+  "name": "Discord Color Import",
+  "id": "1299822951515377988",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": ["figma"],
+  "ui": "ui.html",
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}
